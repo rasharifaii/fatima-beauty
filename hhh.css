@@ -17,22 +17,29 @@ body {
 }
 .back-button {
   position: fixed;
-  top: 10px;
-  left: 10px;
-  background-color: purple;
+  top: 20px;
+  left: 20px;
+  background-color: #a84c96;
   color: white;
-  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
   cursor: pointer;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 1000;
-  transition: opacity 0.3s ease;
+}
+.back-button.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 
-.back-button.hidden {
-  opacity: 0;
-  pointer-events: none;
+
+.back-button:hover {
+    background-color: #b88ab5;
 }
+
+
 
 .category-buttons {
   display: flex;
@@ -54,7 +61,7 @@ body {
 }
 
 .section-button:hover {
-  background-color: #8d3e7e;
+  background-color: #b88ab5;
 }
 
 .products {
@@ -110,5 +117,4 @@ text-align: center;
   color: #6e3b6e;
   font-size: 14px;
   margin-top: 50px;
-
 }
