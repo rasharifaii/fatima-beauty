@@ -9,7 +9,7 @@
 
 body {
       font-family: 'Arial', sans-serif;
-      background-color: #fff0f5;
+      background-color: #fff0f5; 
       color: #333;
       text-align: center;
       margin: 0;
@@ -38,22 +38,22 @@ body {
   margin-top: 30px;
 }
 
-.link-button {
-  background-color: #a84c96; 
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 200px;
-}
+  .link-button {
+      background-color: #9b59b6; /* موف */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
 
-.link-button:hover {
-  background-color: #8d3e7e; 
-}
-
+    .link-button:hover {
+      background-color: #b88ab5;
+    }
+    
 #products {
   display: none;
 }
@@ -74,7 +74,7 @@ body {
       padding: 20px;
       margin: 20px auto;
       max-width: 600px;
-      box-shadow: 0 4px 10px rgba(155, 89, 182, 0.1); 
+      box-shadow: 0 4px 10px rgba(155, 89, 182, 0.1); /* ظل موف ناعم */
       text-align: right;
     }
 
@@ -134,7 +134,7 @@ p {
     border-bottom: 1px
 }
 
-
+/* إعدادات عامة */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #fffaf9;
@@ -144,7 +144,7 @@ body {
   padding: 0;
 }
 
-
+/* قسم المنتجات */
 .products {
   padding: 40px 20px;
   max-width: 1200px;
@@ -158,6 +158,8 @@ body {
   color: #a84c56;
 }
 
+/* كل منتج */
+/* ترتيب المنتجات على شكل شبكة */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -165,7 +167,7 @@ body {
   margin-top: 30px;
 }
 
-
+/* لمسة تجميلية للمنتج */
 .product {
   border: 1px solid #eee;
   padding: 20px;
@@ -356,7 +358,7 @@ header {
     color: #a84c56;
 }
 
-
+/* Image Styling */
 .image-container {
     margin-top: 20px;
     text-align: center;
@@ -645,5 +647,4 @@ body {
     .home h2 {
         font-size: 28px;
     }
-
 }
