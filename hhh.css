@@ -17,14 +17,13 @@ body {
 }
 .back-button {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  background-color: #a84c96;
+  top: 10px;
+  left: 10px;
+  background-color: purple;
   color: white;
+  padding: 10px 15px;
   border: none;
-  padding: 10px 20px;
-  font-size: 14px;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   z-index: 1000;
   transition: opacity 0.3s ease;
@@ -34,7 +33,6 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-
 
 .category-buttons {
   display: flex;
@@ -112,4 +110,5 @@ text-align: center;
   color: #6e3b6e;
   font-size: 14px;
   margin-top: 50px;
+
 }
