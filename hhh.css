@@ -16,17 +16,20 @@ body {
   direction: rtl;
 }
 .back-button {
+  background-color: #b066d3;
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
   position: fixed;
   top: 20px;
   left: 20px;
-  background-color: #a84c96;
-  color: white;
-  border: none;
   padding: 8px 16px;
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: 0.3s;
   z-index: 1000;
 }
 .back-button.hide {
@@ -34,9 +37,8 @@ body {
   visibility: hidden;
 }
 
-
 .back-button:hover {
-    background-color: #b88ab5;
+    background-color: #9249b0;
 }
 
 
@@ -50,18 +52,17 @@ body {
 }
 
 .section-button {
-  background-color: #a84c96;
+  background-color: #9420ca;
   color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
-
 .section-button:hover {
-  background-color: #b88ab5;
+    background-color: #9249b0;
 }
 
 .products {
