@@ -32,27 +32,26 @@ body {
 
    .button-container {
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    gap: 15px;         
-    margin-top: 20px;
+      display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
 }
 .link-button {
-    padding: 10px 20px;
-    background-color: #A85DCB;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    width: 200px; 
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #b066d3;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 .link-button:hover {
     background-color: #9249b0;
 }
-
+    
 #products {
   display: none;
 }
@@ -633,8 +632,6 @@ body {
         display: block;
     }
 
-
-
     .logo {
         font-size: 24px;
     }
@@ -646,5 +643,10 @@ body {
     .home h2 {
         font-size: 28px;
     }
+.link-button{
+        width: 70%;
+    margin-bottom: 15px;
+    display: inline-block;
+    text-align: center;
 }
-
+}
