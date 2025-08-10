@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FATIMA BEAUTY</title>
+  <link rel="stylesheet" href="rrr.css">
+</head>
+
+<body>
+  <button id="backButton" class="back-button" onclick="window.location.href='fatima.html'">Back</button>
+
+  <div class="container">
+    <form class="review-form">
+      <h2>send review</h2>
+
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="your name" required>
+      </div>
+
+      <div class="form-group">
+        <textarea id="review" name="review" placeholder="message" required></textarea>
+      </div>
+
+      <button class="submit-btn" onclick="addReview()">send</button>
+    </form>
+
+    <div class="reviews-container" id="reviewsContainer">
+      <h3>Previous reviews:</h3>
+
+      <button class="clear-btn" onclick="clearReviews()">delete all comment</button>
+    </div>
+  </div>
+
+
+  <script>
+
+    function loadReviews() {
+      const container = document.getElementById("reviewsContainer");
+      const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+      if (reviews.length === 0) {
+        container.innerHTML += "<p>There are no reviews yet.</p>";
+      } else {
+        reviews.forEach(r => {
+          const reviewEl = document.createElement("div");
+          reviewEl.className = "review-item";
+          reviewEl.innerHTML = `<h4>${r.name}</h4><p>${r.review}</p>`;
+          container.appendChild(reviewEl);
+        });
+      }
+    }
+
+
+    function addReview() {
+      const name = document.getElementById("name").value.trim();
+      const review = document.getElementById("review").value.trim();
+
+      if (!name || !review) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      const newReview = { name, review };
+      const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+      reviews.unshift(newReview);
+      localStorage.setItem("reviews", JSON.stringify(reviews));
+
+
+      location.reload();
+    }
+    function clearReviews() {
+      if (confirm("Are you sure you want to clear all reviews?")) {
+        localStorage.removeItem("reviews");
+        location.reload();
+      }
+    }
+
+
+    window.onload = loadReviews;
+  </script>
+</body>
+
+</html>
